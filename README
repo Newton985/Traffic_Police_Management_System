@@ -1,0 +1,8 @@
+Traffic police management system.
+
+Built using JavaFx and scene builder for gui, utilizing mysql database and jdbc.
+
+Allows police to report for work, manager to monitor daily activities and the administarator to control details.
+
+Contact- newtonkarani98@gmail.com.
+

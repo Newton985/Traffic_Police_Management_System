@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="576.0" prefWidth="724.0" style="-fx-background-color: brown;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tpms.AdminsceneController">
+   <children>
+      <Pane layoutX="10.0" layoutY="14.0" prefHeight="39.0" prefWidth="705.0" style="-fx-background-color: PINK; -fx-border-color: TEAL;">
+         <children>
+            <Label layoutX="292.0" layoutY="12.0" text="ADMINISTARATOR" />
+         </children></Pane>
+      <TabPane layoutX="13.0" layoutY="56.0" prefHeight="506.0" prefWidth="699.0" style="-fx-background-color: lavender; -fx-border-color: TEAL;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="ALL LIST    ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="7.0" layoutY="7.0" prefHeight="67.0" prefWidth="687.0" style="-fx-background-color: PINK; -fx-border-color: TEAL;">
+                           <children>
+                              <Label layoutX="191.0" layoutY="19.0" prefHeight="29.0" prefWidth="273.0" text="LIST OF ALL USERS">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children></Pane>
+                        <TableView fx:id="adminTable" layoutX="9.0" layoutY="85.0" prefHeight="361.0" prefWidth="680.0" style="-fx-border-color: TEAL;">
+                          <columns>
+                            <TableColumn fx:id="colname" prefWidth="264.0" text="NAME" />
+                            <TableColumn fx:id="colbadge" prefWidth="139.0" text="BADGE" />
+                              <TableColumn fx:id="colid" prefWidth="134.0" text="ID" />
+                              <TableColumn fx:id="colphone" prefWidth="130.0" text="CONTACT" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="NEW ENTRY  ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="445.0" prefWidth="699.0">
+                     <children>
+                        <Pane layoutX="11.0" layoutY="8.0" prefHeight="75.0" prefWidth="678.0" style="-fx-background-color: PINK; -fx-border-color: TEAL;">
+                           <children>
+                              <Label layoutX="174.0" layoutY="18.0" text="ADD A NEW USER">
+                                 <font>
+                                    <Font size="32.0" />
+                                 </font>
+                              </Label>
+                           </children></Pane>
+                        <Pane layoutX="13.0" layoutY="92.0" prefHeight="316.0" prefWidth="675.0" style="-fx-border-color: TEAL;">
+                           <children>
+                              <Label layoutX="45.0" layoutY="25.0" text="NAME" />
+                              <Label layoutX="16.0" layoutY="81.0" text="ID NUMBER" />
+                              <Label layoutX="18.0" layoutY="138.0" text="BADGE NO" />
+                              <Label layoutX="25.0" layoutY="202.0" text="GENDER" />
+                              <Label layoutX="412.0" layoutY="25.0" text="AGE" />
+                              <Label layoutX="394.0" layoutY="81.0" text="CONTACT" />
+                              <Label layoutX="387.0" layoutY="147.0" text="PASSWORD" />
+                              <Label layoutX="421.0" layoutY="199.0" text="RANK" />
+                              <TextField fx:id="nameadtex" layoutX="100.0" layoutY="20.0" prefHeight="33.0" prefWidth="206.0" promptText="FULL NAME" style="-fx-border-color: MAROON;" />
+                              <TextField fx:id="idadtxt" layoutX="100.0" layoutY="69.0" prefHeight="33.0" prefWidth="206.0" promptText="ID NUMBER" style="-fx-border-color: MAROON;" />
+                              <TextField fx:id="badgeadtxt" layoutX="98.0" layoutY="129.0" prefHeight="34.0" prefWidth="211.0" promptText="BADGE NUMBER" style="-fx-border-color: MAROON;" />
+                              <TextField fx:id="ageadtxt" layoutX="467.0" layoutY="20.0" prefHeight="36.0" prefWidth="170.0" promptText="AGE" style="-fx-border-color: MAROON;" />
+                              <TextField fx:id="contadtxt" layoutX="467.0" layoutY="76.0" prefHeight="35.0" prefWidth="170.0" promptText="PHONE NUMBER" style="-fx-border-color: MAROON;" />
+                              <TextField fx:id="passadtxt" layoutX="467.0" layoutY="135.0" prefHeight="33.0" prefWidth="170.0" promptText="PASSWORD" style="-fx-border-color: MAROON;" />
+                              <ComboBox fx:id="gencombo" layoutX="99.0" layoutY="189.0" prefHeight="35.0" prefWidth="209.0" style="-fx-border-color: MAROON;" />
+                              <ComboBox fx:id="rankadtxt" layoutX="467.0" layoutY="187.0" prefHeight="35.0" prefWidth="170.0" style="-fx-border-color: MAROON;" />
+                              <Button fx:id="clearadbt" layoutX="98.0" layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: BROWN;" text="CLEAR" />
+                              <Button fx:id="canceladbt" layoutX="309.0" layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: ORANGE;" text="CANCEL" />
+                              <Button fx:id="submitadbt" layoutX="517.0" layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: TEAL;" text="SUBMIT" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="UPDATE DATA">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="9.0" layoutY="14.0" prefHeight="68.0" prefWidth="677.0" style="-fx-border-color: ORANGE; -fx-background-color: PINK;">
+                           <children>
+                              <Label layoutX="63.0" layoutY="27.0" text="BADGE NO" />
+                              <TextField fx:id="badgedeltxt" layoutX="162.0" layoutY="18.0" prefHeight="32.0" prefWidth="223.0" promptText="ENTER BADGE NUMBRER" style="-fx-border-color: brown;" />
+                              <Button fx:id="deletebut" layoutX="459.0" layoutY="16.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="118.0" style="-fx-background-color: RED;" text="DELETE USER" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="9.0" layoutY="88.0" prefHeight="361.0" prefWidth="679.0" style="-fx-border-color: TEAL;">
+                           <children>
+                              <Label layoutX="14.0" layoutY="57.0" text="BADGE NO" />
+                              <Label layoutX="345.0" layoutY="228.0" text="NEW PASSWORD" />
+                              <Label layoutX="12.0" layoutY="228.0" text="NEW NAME" />
+                              <Label layoutX="392.0" layoutY="146.0" text="NEW ID" />
+                              <Label layoutX="351.0" layoutY="57.0" text="NEW CONTACT" />
+                              <Label layoutX="8.0" layoutY="146.0" text="NEW BADGE" />
+                              <Button fx:id="updatebut" layoutX="416.0" layoutY="291.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="155.0" style="-fx-background-color: TEAL;" text="UPDATE" />
+                              <TextField fx:id="oldbadgetxt" layoutX="99.0" layoutY="49.0" prefHeight="32.0" prefWidth="224.0" promptText="OLD BADGE NUMBER" style="-fx-border-color: brown;" />
+                              <TextField fx:id="newpasstxt" layoutX="465.0" layoutY="216.0" prefHeight="39.0" prefWidth="203.0" promptText="NEW PASSWORD" style="-fx-border-color: brown;" />
+                              <TextField fx:id="newnametxt" layoutX="101.0" layoutY="216.0" prefHeight="39.0" prefWidth="220.0" promptText="NEW NAME" style="-fx-border-color: brown;" />
+                              <TextField fx:id="newidtxt" layoutX="464.0" layoutY="134.0" prefHeight="39.0" prefWidth="204.0" promptText="NEW ID" style="-fx-border-color: brown;" />
+                              <TextField fx:id="newconttxt" layoutX="462.0" layoutY="48.0" prefHeight="33.0" prefWidth="207.0" promptText="NEW CONTACT" style="-fx-border-color: brown;" />
+                              <TextField fx:id="newbadgetxt" layoutX="102.0" layoutY="134.0" prefHeight="39.0" prefWidth="222.0" promptText="NEW BADGE NUMBER" style="-fx-border-color: brown;" />
+                              <Button fx:id="cancadbut" layoutX="199.0" layoutY="291.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="154.0" style="-fx-background-color: BROWN;" text="CANCEL" />
+                              <Label layoutX="243.0" layoutY="2.0" style="-fx-background-color: GRAY;" text="UPDATE USER DETAILS">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="STATION DETAILS">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="483.0" prefWidth="600.0" style="-fx-background-color: maroon;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tpms.OfficersceneController">
+   <children>
+      <Pane layoutX="10.0" layoutY="14.0" prefHeight="55.0" prefWidth="581.0" style="-fx-background-color: pink; -fx-border-color: TEAL;">
+         <children>
+            <Pane layoutX="14.0" layoutY="4.0" prefHeight="46.0" prefWidth="105.0" style="-fx-background-color: TEAL;" />
+            <Text layoutX="160.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OFFICER NAME" wrappingWidth="130.525390625" />
+            <Text layoutX="447.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CURRENT DATE" />
+         </children>
+      </Pane>
+      <TabPane layoutX="12.0" layoutY="73.0" prefHeight="396.0" prefWidth="581.0" style="-fx-background-color: lavender; -fx-border-color: TEAL;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="REPORT TODAY">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="322.0" prefWidth="509.0" style="-fx-background-color: teal; -fx-border-color: orange;">
+                     <children>
+                        <Pane layoutX="144.0" layoutY="18.0" prefHeight="329.0" prefWidth="277.0" style="-fx-background-color: LAVENDER; -fx-border-color: ORANGE; -fx-border-width: 3PX;">
+                           <children>
+                              <Text layoutX="72.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REPORT FOR  TODAY" underline="true" />
+                              <Text layoutX="77.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOCATION OF WORK" />
+                              <Text layoutX="119.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SHIFT" />
+                              <ComboBox fx:id="timecombo" layoutX="53.0" layoutY="201.0" prefHeight="42.0" prefWidth="175.0" promptText="SELECT" style="-fx-border-color: TEAL;" />
+                              <Button fx:id="submitofficerbt" layoutX="58.0" layoutY="270.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="171.0" style="-fx-background-color: TEAL;" text="SUBMIT" />
+                              <TextField fx:id="locatxt" layoutX="50.0" layoutY="133.0" prefHeight="35.0" prefWidth="179.0" promptText="LOCATION" style="-fx-border-color: TEAL;" />
+                              <TextField fx:id="badtxt" layoutX="51.0" layoutY="66.0" prefHeight="33.0" prefWidth="178.0" promptText="BADGE" style="-fx-border-color: TEAL;" />
+                              <Label layoutX="105.0" layoutY="51.0" text="BADGE NO" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="ACTIVITY LOG">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="10.0" layoutY="5.0" prefHeight="349.0" prefWidth="564.0" style="-fx-background-color: pink; -fx-border-color: ORANGE;">
+                           <children>
+                              <Text layoutX="22.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BADGE" />
+                              <Button fx:id="viewbt" layoutX="452.0" layoutY="24.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="102.0" style="-fx-background-color: TEAL;" text="VIEW" />
+                              <TableView fx:id="tableOfficer" layoutX="8.0" layoutY="72.0" prefHeight="262.0" prefWidth="546.0" style="-fx-border-color: TEAL;">
+                                <columns>
+                                  <TableColumn fx:id="COL_DATE" prefWidth="170.0" text="DATE" />
+                                  <TableColumn fx:id="COL_LOC" prefWidth="202.0" text="LOCATION" />
+                                    <TableColumn fx:id="COL_SHIFT" prefWidth="158.0" text="SHIFT" />
+                                </columns>
+                              </TableView>
+                              <TextField fx:id="bdtxt" layoutX="80.0" layoutY="25.0" prefHeight="32.0" prefWidth="171.0" promptText="enter badge number" style="-fx-border-color: BROWN;" />
+                              <ComboBox fx:id="periodcomb" layoutX="278.0" layoutY="24.0" prefHeight="34.0" prefWidth="156.0" promptText="SELECT PERIOD" style="-fx-border-color: BROWN;" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

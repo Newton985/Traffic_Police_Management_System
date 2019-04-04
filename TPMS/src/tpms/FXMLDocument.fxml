@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="554.0" prefWidth="694.0" style="-fx-background-color: BROWN; -fx-border-color: ORANGE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tpms.FXMLDocumentController">
+   <children>
+      <Pane layoutX="11.0" layoutY="8.0" prefHeight="62.0" prefWidth="664.0" style="-fx-background-color: pink; -fx-border-color: TEAL;">
+         <children>
+            <Pane layoutX="14.0" layoutY="15.0" prefHeight="41.0" prefWidth="115.0" style="-fx-background-color: TEAL;" />
+            <Label layoutX="271.0" layoutY="19.0" text="MANAGER">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+         </children>
+      </Pane>
+      <TabPane layoutX="14.0" layoutY="75.0" prefHeight="468.0" prefWidth="664.0" style="-fx-background-color: LAVENDER; -fx-border-color: TEAL;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="ALL TODAY LIST">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="438.0" prefWidth="662.0">
+                     <children>
+                        <Pane layoutX="8.0" layoutY="6.0" prefHeight="80.0" prefWidth="652.0" style="-fx-background-color: PINK; -fx-border-color: orange;">
+                           <children>
+                              <Label layoutX="152.0" layoutY="14.0" style="-fx-background-color: LAVENDER;" text="LIST OF OFFICERS AND RESPECTIVE LOCATIONS TODAY" />
+                              <Label layoutX="14.0" layoutY="51.0" text="SELECT A DIFFERENT DATE" />
+                              <TextField fx:id="datetxt" layoutX="203.0" layoutY="46.0" promptText="DD/MM/YYYY" style="-fx-border-color: BROWN;" />
+                              <Button fx:id="showdatebt" layoutX="420.0" layoutY="46.0" mnemonicParsing="false" style="-fx-background-color: TEAL;" text="SHOW" />
+                           </children>
+                        </Pane>
+                        <TableView fx:id="tableMan" layoutX="10.0" layoutY="94.0" prefHeight="318.0" prefWidth="648.0" style="-fx-background-color: LAVENDER; -fx-border-color: TEAL;">
+                          <columns>
+                            <TableColumn fx:id="NAME_COL" prefWidth="201.0" text="NAME" />
+                            <TableColumn fx:id="BADGE_COL" prefWidth="153.0" text="BADGE NO." />
+                              <TableColumn fx:id="LOC_COL" prefWidth="142.0" text="LOCATION" />
+                              <TableColumn fx:id="SHIFT_COL" prefWidth="146.0" text="SHIFT" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="SEARCH           ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="9.0" layoutY="8.0" prefHeight="65.0" prefWidth="646.0" style="-fx-background-color: PINK; -fx-border-color: ORANGE;">
+                           <children>
+                              <Label layoutX="55.0" layoutY="15.0" text="BADGE NO" />
+                              <Label layoutX="270.0" layoutY="7.0" text="PERIOD" />
+                              <TextField fx:id="badgenotxt" layoutX="17.0" layoutY="33.0" promptText="BADGE NO" style="-fx-border-color: BROWN;" />
+                              <ComboBox fx:id="pcombo" layoutX="213.0" layoutY="33.0" prefWidth="150.0" promptText="select" style="-fx-border-color: BROWN;" />
+                              <Button fx:id="showbt" layoutX="425.0" layoutY="14.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="107.0" style="-fx-background-color: TEAL;" text="SHOW" />
+                           </children>
+                        </Pane>
+                        <TableView fx:id="tablemanser" layoutX="9.0" layoutY="75.0" prefHeight="315.0" prefWidth="645.0" style="-fx-border-color: TEAL;">
+                          <columns>
+                            <TableColumn fx:id="DATE_COL" prefWidth="205.0" text="DATE" />
+                              <TableColumn fx:id="LOCS_COL" prefWidth="238.0" text="LOCATION" />
+                              <TableColumn fx:id="SHIFTS_COL" prefWidth="197.0" text="SHIFT" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="ALL OFFICERS">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane layoutX="7.0" layoutY="8.0" prefHeight="41.0" prefWidth="647.0" style="-fx-background-color: PINK;">
+                           <children>
+                              <Label layoutX="178.0" layoutY="11.0" text="LIST OF ALL REGISTERD OFFICERS">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <TableView fx:id="tableManAll" layoutX="7.0" layoutY="51.0" prefHeight="369.0" prefWidth="648.0">
+                          <columns>
+                            <TableColumn fx:id="names_col" prefWidth="267.0" text="NAME" />
+                            <TableColumn fx:id="badges_col" prefWidth="128.0" text="BADGE" />
+                              <TableColumn fx:id="ids_col" prefWidth="115.0" text="ID" />
+                              <TableColumn fx:id="conta_col" prefWidth="134.0" text="CONTACT" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
